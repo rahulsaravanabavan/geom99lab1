@@ -1,7 +1,11 @@
 // Map options
-function initMap() {
-    const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 44.35411847409072, lng: -78.7409030701281},
-        zoom: 5,
-    });
+let map;
+async function initMap() {
+  const { Map } = await google.maps.importLibrary("maps");
+  map = new Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
+  });
 }
+
+initMap();
